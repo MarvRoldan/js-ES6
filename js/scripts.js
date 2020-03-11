@@ -183,5 +183,23 @@ console.log( myTestString.search( /TING/i ) ); // Regex match. "i" is for case-I
  * .replace() Method:
  */
 
- const myReplacedString = myTestString.replace( /Programs/, "World" );
- console.log ( myReplacedString ); 
+const myReplacedString = myTestString.replace( /Programs/, "World" ); // Find a string, and replace it! Super cool.
+console.log ( myReplacedString ); 
+
+/**
+ * Blocks:
+ */
+// Unamed block... we can use this to contain otherwise-global const and let variables.
+{
+    const myBlockNestedVar = 38;
+}
+
+// console.log( myBlockNestedVar );
+
+// WE CAN name blocks if we want. 
+myOrganizeName: { // This could be named anything...
+    // We can organize some code in here, and control scop of let/const.
+    let myBlockNestedVar = 55; // We used the same name in our unnamed block!!?! That's okay, it was born in a differently scoped block!
+    myBlockNestedVar++;
+    console.log( myBlockNestedVar );
+}
