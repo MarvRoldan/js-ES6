@@ -165,3 +165,23 @@ const aBunchOfNums = [ 5, 10, 36, 58 ];
 console.log( addAllNums( 5, 10, 36, 58 ) );
 // console.log( addAllNums( aBunchOfNums ) ); This will just return an array.
 console.log( addAllNums( ...aBunchOfNums ) ); // Spreading an argument.
+
+/**
+ * String Methods!
+ */
+
+/**
+ * .search() Method:
+ * 
+ * Regex Learning Tool: https://regexone.com/
+ */
+
+const myTestString = "Greetings, Programs";
+console.log( myTestString.search( /TING/i ) ); // Regex match. "i" is for case-INsensitive. Returns the SUBSTRING POSITION. TING is 4.
+
+/**
+ * .replace() Method:
+ */
+
+ const myReplacedString = myTestString.replace( /Programs/, "World" );
+ console.log ( myReplacedString ); 
