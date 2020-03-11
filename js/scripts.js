@@ -48,3 +48,37 @@ console.log( fromArray2 ); // Even spaces and special characters will be capture
  */
  var filtered = myArray.filter ( function ( element ) { return element > 4; } );
  console.log( filtered ); // ALL matches returned!!
+
+/**
+ * .reduce() metehod:
+ * We can add on to a value, returns only a single.
+ */
+var reduceResult = myArray.reduce( function ( accumulator, currentVal ) { return accumulator +  currentVal; } );
+console.log( reduceResult );
+
+console.log( [ 1, 2, 3, 4].reduce( function ( a, v ) { return a + v; } ) ); // Because we have numbers in here, they are being added (mathematically).
+
+/**
+ * Let and Const
+ */
+var x = 3; // Standard variable declaration. Function scoped.
+let = 7; // Let is block-scoped. 
+const z = 36; // Const is block-scope, but re-assignment is not allowed.
+
+// z = 16; NOT allowed! Const must remain with its original assignment.
+ console.log( z );
+
+y = 13; // Allowed! var and let allow re-assingment.
+ console.log( y );
+
+for ( var myVar = 0; myVar < 10; myVar++ ) {
+     console.log( "For loop iteration..." );
+ }
+
+ console.log( "myVar = " +myVar );
+
+for ( let myNewVar = 0; myNewVar < 10; myNewVar++ ) {
+    console.log( "For loop iteration..." );
+}
+
+console.log( "myVar = " +myNewVar );
