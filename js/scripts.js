@@ -118,3 +118,50 @@ myOtherFunction = ( a, b ) => {
     return myAnswer;
 }
 console.log( myOtherFunction( 34, 6 ) );
+
+/**
+* Functon default parameter vaules.
+*/
+// We can set defaults, to prevent errors in case nothing gets passed in from a parameter!
+addNums = ( x=0, y=0 ) => x + y;
+
+console.log( addNums() ); // No arguments! But our  default values kick in!
+
+/**
+ * Rest parameter.
+ */
+
+findHighNum = ( ...args ) => { //...args will capture any number of arguments that we pass!
+    console.log( args ); // It can be called by the name we had inbetween our parenthesis.
+    return args;
+}
+
+// Gettings the sum of ALL numbers passed in!
+addAllNums = (...nums) => nums.reduce( ( a, v ) => a + v);
+console.log( addAllNums( 64, 6, 10 ) );
+
+/**
+ * Template Literals
+ */
+
+const helloVar = "Hello, World!";
+const sampleName = "Sam";
+
+const myNewString = `Hey there, my name is ${sampleName}; I\'d like to gave you a big: "${helloVar}"!!`; // The syntax for template literals is: ${variableName} --> NOTE: This only works inside of backticks! Bu is super useful. It saves us from extra concatenation.
+console.log( myNewString );
+
+/**
+ * Spread Operator
+ *  DON'T get this confised with the rest parameters! Both are three dots...
+ *  REMEMBER that rest parameter is always in PARAMETER area of a fucntion, nowhere else. Spread is used ANYWHERE else basically.
+ */
+
+const newArray = [ "Hello", ",", " ", "World", "!" ];
+console.log( newArray );
+console.log( ...newArray ); // Brought the values in the array together as one (space-seperated) string.
+
+// Spread operator separates into separates values.
+const aBunchOfNums = [ 5, 10, 36, 58 ];
+console.log( addAllNums( 5, 10, 36, 58 ) );
+// console.log( addAllNums( aBunchOfNums ) ); This will just return an array.
+console.log( addAllNums( ...aBunchOfNums ) ); // Spreading an argument.
